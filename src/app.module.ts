@@ -16,7 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: process.env.DB_USERNAME,
       type: 'postgres',
       synchronize: true,
-      entities: [`${__dirname}/**/*.entity{.ts,.js}`],
+      entities: [`${__dirname}/**/*.entity{.js,.ts}`],
     })
     , UserModule],
   controllers: [],
