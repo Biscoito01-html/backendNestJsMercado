@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { CartEntity } from "src/cart/entities/cart.entity";
+import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('users')
 export class UserEntity {
@@ -37,6 +38,7 @@ export class UserEntity {
 
     @Column({ name: 'status', nullable: false })
     status: boolean;
+
 
     @CreateDateColumn({ name: 'created_at' })
     createdAt: Date;
